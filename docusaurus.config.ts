@@ -37,7 +37,7 @@ const config: Config = {
         hashed: true,
         indexDocs: true,
         indexPages: true,
-        language: ['zh'],
+        language: ['en', 'zh'],
       },
     ],
   ],
