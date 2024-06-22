@@ -10,38 +10,35 @@ type FeatureItem = {
 
 const FeatureList: FeatureItem[] = [
   {
-    title: 'Easy to Use',
+    title: '人工智能理论',
     Svg: require('@site/static/img/undraw_docusaurus_mountain.svg').default,
     description: (
       <>
-        Docusaurus was designed from the ground up to be easily installed and
-        used to get your website up and running quickly.
+        构建机器学习、流行神经网络模型等人工智能基础理论知识体系。 关注
+        NLP、搜索引擎、推荐系统、CV 等人工智能领域的应用方案。
       </>
     ),
   },
   {
-    title: 'Focus on What Matters',
+    title: 'AIGC 前沿动态',
     Svg: require('@site/static/img/undraw_docusaurus_tree.svg').default,
     description: (
       <>
-        Docusaurus lets you focus on your docs, and we&apos;ll do the chores. Go
-        ahead and move your docs into the <code>docs</code> directory.
+        跟踪 AIGC 领域如 LLM、AI Agents、AGI 等前沿研究的最新动态，搭建 AI App
+        Marketplace。
       </>
     ),
   },
   {
-    title: 'Powered by React',
+    title: '工程建设',
     Svg: require('@site/static/img/undraw_docusaurus_react.svg').default,
     description: (
-      <>
-        Extend or customize your website layout by reusing React. Docusaurus can
-        be extended while reusing the same header and footer.
-      </>
+      <>关注 AI 应用工程常用编程语言、计算平台、算法框架、落地方案。</>
     ),
   },
 ];
 
-function Feature({title, Svg, description}: FeatureItem) {
+function Feature({ title, Svg, description }: FeatureItem) {
   return (
     <div className={clsx('col col--4')}>
       <div className="text--center">

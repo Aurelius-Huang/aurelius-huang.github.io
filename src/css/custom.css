@@ -28,3 +28,17 @@
   --ifm-color-primary-lightest: #4fddbf;
   --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.3);
 }
+
+/* .favicon img {
+  border-radius: 50%;
+}
+
+.navbar__logo img {
+  border-radius: 50%;
+}
+
+.featureSvg_src-components-HomepageFeatures-styles-module {
+  height: 100%;
+  width: 100%;
+  border-radius: 9%;
+} */
