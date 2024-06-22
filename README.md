@@ -5,7 +5,8 @@
 - [x] 在 GitHub 上配置 CI/CD workflow；
 - [x] 适配 Site metadata；
 - [x] 适配 Home Page；
-- [x] 切换中文语言，启用中文文档本地搜索；
+- [x] 切换中文语言，启用中英文本地文档搜索；
+- [x] 适配导航与目录；
 - [ ] 阅读次数统计；
 
 ## Features
