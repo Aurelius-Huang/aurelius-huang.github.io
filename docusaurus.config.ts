@@ -80,6 +80,7 @@ const config: Config = {
         path: './articles/ml',
         routeBasePath: 'ml',
         sidebarPath: './sidebars.ts',
+        showLastUpdateTime: true,
       },
     ],
     [
@@ -180,12 +181,12 @@ const config: Config = {
         },
         {
           type: 'dropdown',
-          label: '见闻成长',
+          label: '见闻增长',
           position: 'right',
           items: [
             {
               to: '/communication',
-              label: '人际方法',
+              label: '人际沟通',
               docId: 'index',
               docsPluginId: 'communication',
             },
