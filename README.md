@@ -1,41 +1,78 @@
-# Website
+# ThreeFish K.A.
 
-This website is built using [Docusaurus](https://docusaurus.io/), a modern static website generator.
+## Todos
 
-### Installation
+- [x] 在 GitHub 上配置 CI/CD workflow；
+- [ ] 更新 Site metadata；
 
-```
-$ yarn
-```
+## Features
 
-### Local Development
+- XXX
 
-```
-$ yarn start
-```
+## Environment
 
-This command starts a local development server and opens up a browser window. Most changes are reflected live without having to restart the server.
+<details>
+    <summary>Environment Maintenance</summary>
 
-### Build
+1. Install Node.js
 
-```
-$ yarn build
-```
+   ```bash
+   # installs nvm (Node Version Manager)
+   curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.7/install.sh | bash
 
-This command generates static content into the `build` directory and can be served using any static contents hosting service.
+   # download and install Node.js (you may need to restart the terminal)
+   nvm install 20
 
-### Deployment
+   # verifies the right Node.js version is in the environment
+   node -v # should print `v20.15.0`
 
-Using SSH:
+   # verifies the right NPM version is in the environment
+   npm -v # should print `10.7.0`
+   ```
 
-```
-$ USE_SSH=true yarn deploy
-```
+2. Create Project[aurelius-huang]
 
-Not using SSH:
+   ```bash
+   npx create-docusaurus@latest aurelius-huang classic --typescript
+   ```
 
-```
-$ GIT_USER=<Your GitHub username> yarn deploy
-```
+3. Install Runtime Packages
 
-If you are using GitHub pages for hosting, this command is a convenient way to build the website and push to the `gh-pages` branch.
+   ```bash
+   yarn
+   ```
+
+4. Start Development Server
+
+   ```bash
+   yarn start
+   ```
+
+   This command starts a local development server and opens up a browser window. Most changes are reflected live without
+   having to restart the server.
+
+5. Build
+
+   ```bash
+   yarn build
+   ```
+
+   This command generates static content into the `build` directory and can be served using any static contents hosting
+   service.
+
+6. Deployment
+
+   ```bash
+   USE_SSH=true yarn deploy
+   ```
+
+   Not using SSH:
+
+   ```
+   GIT_USER=<Your GitHub username> yarn deploy
+   ```
+
+   If you are using GitHub pages for hosting, this command is a convenient way to build the website and push to
+   the `gh-pages` branch.
+
+</details>
