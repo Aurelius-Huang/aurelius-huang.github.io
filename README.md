@@ -3,7 +3,8 @@
 ## Todos
 
 - [x] 在 GitHub 上配置 CI/CD workflow；
-- [ ] 更新 Site metadata；
+- [x] 适配 Site metadata；
+- [ ] 适配 Home Page；
 
 ## Features
 
