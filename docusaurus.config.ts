@@ -46,14 +46,20 @@ const config: Config = {
     [
       'classic',
       {
-        docs: {
-          sidebarPath: './sidebars.ts',
-          // Please change this to your repo.
-          // Remove this to remove the "edit this page" links.
-          editUrl: 'https://github.com/aurelius-huang',
-        },
+        // docs: false,
+        // {
+        //   sidebarPath: './sidebars.ts',
+        //   // Please change this to your repo.
+        //   // Remove this to remove the "edit this page" links.
+        //   editUrl: 'https://github.com/aurelius-huang',
+        // },
         blog: {
+          path: 'blog',
+          blogTitle: '动态',
+          routeBasePath: 'trend',
           showReadingTime: true,
+          postsPerPage: 5,
+          blogSidebarCount: 'ALL',
           // Please change this to your repo.
           // Remove this to remove the "edit this page" links.
           editUrl: 'https://github.com/aurelius-huang',
@@ -62,6 +68,55 @@ const config: Config = {
           customCss: './src/css/custom.css',
         },
       } satisfies Preset.Options,
+    ],
+  ],
+
+  plugins: [
+    // ["docusaurus-plugin-umami"],
+    [
+      '@docusaurus/plugin-content-docs',
+      {
+        id: 'ml',
+        path: './articles/ml',
+        routeBasePath: 'ml',
+        sidebarPath: './sidebars.ts',
+      },
+    ],
+    [
+      '@docusaurus/plugin-content-docs',
+      {
+        id: 'dl',
+        path: './articles/dl',
+        routeBasePath: 'dl',
+        sidebarPath: './sidebars.ts',
+      },
+    ],
+    [
+      '@docusaurus/plugin-content-docs',
+      {
+        id: 'aigc',
+        path: './articles/aigc',
+        routeBasePath: 'aigc',
+        sidebarPath: './sidebars.ts',
+      },
+    ],
+    [
+      '@docusaurus/plugin-content-docs',
+      {
+        id: 'practice',
+        path: './articles/practice',
+        routeBasePath: 'practice',
+        sidebarPath: './sidebars.ts',
+      },
+    ],
+    [
+      '@docusaurus/plugin-content-docs',
+      {
+        id: 'communication',
+        path: './articles/communication',
+        routeBasePath: 'communication',
+        sidebarPath: './sidebars.ts',
+      },
     ],
   ],
 
@@ -75,14 +130,71 @@ const config: Config = {
         src: 'img/logo.svg',
       },
       items: [
+        // {
+        //   type: 'docSidebar',
+        //   sidebarId: 'autoSidebar',
+        //   position: 'left',
+        //   label: '文档',
+        // },
         {
-          type: 'docSidebar',
-          sidebarId: 'autoSidebar',
+          to: '/trend',
+          label: '动态',
           position: 'left',
-          label: '机器学习',
         },
-        // { to: '/aigc', label: 'AIGC', position: 'left' },
-        { to: '/blog', label: 'Blog', position: 'left' },
+        {
+          to: '/ml',
+          label: '机器学习',
+          docId: 'index',
+          type: 'doc',
+          position: 'right',
+          docsPluginId: 'ml',
+        },
+        {
+          to: '/dl',
+          label: '深度学习',
+          docId: 'index',
+          type: 'doc',
+          position: 'right',
+          docsPluginId: 'dl',
+        },
+        {
+          to: '/aigc',
+          label: 'AIGC',
+          docId: 'index',
+          type: 'doc',
+          position: 'right',
+          docsPluginId: 'aigc',
+        },
+        {
+          type: 'dropdown',
+          label: '应用篇',
+          position: 'right',
+          items: [
+            {
+              to: '/practice',
+              label: '工程实践',
+              docId: 'index',
+              docsPluginId: 'practice',
+            },
+          ],
+        },
+        {
+          type: 'dropdown',
+          label: '见闻成长',
+          position: 'right',
+          items: [
+            {
+              to: '/communication',
+              label: '人际方法',
+              docId: 'index',
+              docsPluginId: 'communication',
+            },
+          ],
+        },
+        {
+          type: 'search',
+          position: 'right',
+        },
         {
           href: 'https://github.com/aurelius-huang',
           label: 'GitHub',
@@ -94,29 +206,62 @@ const config: Config = {
       style: 'dark',
       links: [
         {
-          title: 'Docs',
+          title: '知识体系',
           items: [
             {
-              label: 'Tutorial',
-              to: '/docs/intro',
+              label: '机器学习',
+              to: '/ml',
+            },
+            {
+              label: '深度学习',
+              to: '/dl',
+            },
+            {
+              label: 'AIGC',
+              to: '/aigc',
             },
           ],
         },
         {
-          title: 'Community',
+          title: '场景应用',
           items: [
             {
-              label: 'Stack Overflow', // 'Discord', 'Twitter',
-              href: 'https://stackoverflow.com/questions/tagged/docusaurus',
+              label: 'NLP',
+              to: '/practice',
+            },
+            {
+              label: '搜索引擎',
+              to: '/practice',
+            },
+            {
+              label: '推荐系统',
+              to: '/practice',
             },
           ],
         },
         {
-          title: 'More',
+          title: '编程语言',
           items: [
             {
-              label: 'Blog',
-              to: '/blog',
+              label: 'Java',
+              to: '/practice',
+            },
+            {
+              label: 'Python',
+              to: '/practice',
+            },
+            {
+              label: 'Go',
+              to: '/practice',
+            },
+          ],
+        },
+        {
+          title: '链接',
+          items: [
+            {
+              label: 'CSDN',
+              href: 'https://blog.csdn.net/ChaoMing_H',
             },
             {
               label: 'GitHub',
