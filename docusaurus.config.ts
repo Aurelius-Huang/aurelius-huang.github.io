@@ -1,6 +1,8 @@
 import { themes as prismThemes } from 'prism-react-renderer';
 import type { Config } from '@docusaurus/types';
 import type * as Preset from '@docusaurus/preset-classic';
+import remarkMath from 'remark-math';
+import rehypeKatex from 'rehype-katex';
 
 const config: Config = {
   title: '三余知行',
@@ -80,6 +82,11 @@ const config: Config = {
         path: './articles/ml',
         routeBasePath: 'ml',
         sidebarPath: './sidebars.ts',
+        showLastUpdateTime: true,
+        remarkPlugins: [remarkMath],
+        rehypePlugins: [rehypeKatex],
+        // remarkPlugins: [(await import('remark-math')).default],
+        // rehypePlugins: [(await import('rehype-katex')).default],
       },
     ],
     [
@@ -180,12 +187,12 @@ const config: Config = {
         },
         {
           type: 'dropdown',
-          label: '见闻成长',
+          label: '见闻增长',
           position: 'right',
           items: [
             {
               to: '/communication',
-              label: '人际方法',
+              label: '人际沟通',
               docId: 'index',
               docsPluginId: 'communication',
             },
@@ -270,13 +277,23 @@ const config: Config = {
           ],
         },
       ],
-      copyright: `Copyright © ${new Date().getFullYear()} ThreeFish K.A., Inc. Built with Docusaurus.`,
+      copyright: `Copyright © ${new Date().getFullYear()} Threefish K. A. 保留所有权利  <a style="color:#6ea8fe" href="https://beian.miit.gov.cn">粤ICP备2023147376号-1</a>`,
     },
     prism: {
       theme: prismThemes.github,
       darkTheme: prismThemes.dracula,
     },
   } satisfies Preset.ThemeConfig,
+
+  stylesheets: [
+    {
+      href: 'https://cdn.jsdelivr.net/npm/katex@0.13.24/dist/katex.min.css',
+      type: 'text/css',
+      integrity:
+        'sha384-odtC+0UGzzFL/6PNoE8rX/SPcQDXBJ+uRepguP4QkPCm2LBxH3FA3y+fKSiJ+AmM',
+      crossorigin: 'anonymous',
+    },
+  ],
 };
 
 export default config;

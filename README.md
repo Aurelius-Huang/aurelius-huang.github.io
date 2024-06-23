@@ -7,7 +7,12 @@
 - [x] 适配 Home Page；
 - [x] 切换中文语言，启用中英文本地文档搜索；
 - [x] 适配导航与目录；
-- [ ] 阅读次数统计；
+- [x] 支持评论与阅读次数统计；
+- [x] 统一文章图片格式；
+- [x] 支持 Markdown Math 语法；
+- [ ] 将文章分段书写，在组装成一个整体文章时，加入头尾信息；
+- [ ] 动态中不内嵌文章整体，须在动态主页中定义 truncate 标记；
+- [ ] 动态中隐藏自带的更新时间，显示自定义的更新时间；
 
 ## Features
 
@@ -45,6 +50,16 @@
    ```bash
    # 支持中文的离线本地搜索插件
    yarn add @easyops-cn/docusaurus-search-local
+
+   # 支持评论与阅读次数统计
+   yarn add @waline/client
+
+   # ant 图标
+   yarn add @ant-design/icons
+
+   # Markdown kate syntax
+   yarn add rehype-katex
+   yarn add remark-math
    ```
 
 4. Install Runtime Packages
