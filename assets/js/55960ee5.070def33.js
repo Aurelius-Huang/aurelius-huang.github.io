@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkthreefish_pages=self.webpackChunkthreefish_pages||[]).push([[4121],{8070:e=>{e.exports=JSON.parse('[{"label":"\u6f14\u793a","permalink":"/docs/tags/\u6f14\u793a","count":1}]')}}]);

@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkthreefish_pages=self.webpackChunkthreefish_pages||[]).push([[5188],{2785:e=>{e.exports=JSON.parse('[{"label":"Home","permalink":"/aigc/tags/home","count":1},{"label":"AIGC","permalink":"/aigc/tags/aigc","count":1}]')}}]);

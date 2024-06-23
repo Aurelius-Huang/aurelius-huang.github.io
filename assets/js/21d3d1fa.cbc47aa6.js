@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkthreefish_pages=self.webpackChunkthreefish_pages||[]).push([[9206],{7485:e=>{e.exports=JSON.parse('[{"label":"Home","permalink":"/practice/tags/home","count":1},{"label":"AI \u5de5\u7a0b\u5b9e\u8df5","permalink":"/practice/tags/ai-\u5de5\u7a0b\u5b9e\u8df5","count":1}]')}}]);
