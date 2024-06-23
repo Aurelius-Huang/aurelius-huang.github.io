@@ -1,1 +1,0 @@
-"use strict";(self.webpackChunkthreefish_pages=self.webpackChunkthreefish_pages||[]).push([[4827],{2814:e=>{e.exports=JSON.parse('{"label":"Home","permalink":"/practice/tags/home","allTagsPath":"/practice/tags","count":1,"items":[{"id":"index","title":"\u5de5\u7a0b\u5b9e\u8df5","description":"\u5de5\u7a0b\u5b9e\u8df5 Home","permalink":"/practice/"}],"unlisted":false}')}}]);
