@@ -56,7 +56,7 @@ function BlogPostPageContent({
       )}
 
       <Waline
-        path={children.slug}
+        path={children.id}
         serverURL="https://comment.threefish.site/"
         lang="zh-CN"
         dark='html[data-theme="dark"]'

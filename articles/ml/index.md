@@ -1,9 +1,7 @@
-# Keep
-
-
-import ArticleHeader from '@site/src/components/ArticleHeader';
-
-<ArticleHeader path="/ml/" updatedAt="2023年12月04日" />
-
+---
+last_update:
+  author: Aurelius
+  date: 2024-06-24
+---
 
 .keep
