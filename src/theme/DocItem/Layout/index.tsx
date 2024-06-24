@@ -1,7 +1,7 @@
 import React from 'react';
 import clsx from 'clsx';
-import { useWindowSize } from '@docusaurus/theme-common';
-import { useDoc } from '@docusaurus/theme-common/internal';
+import {useWindowSize} from '@docusaurus/theme-common';
+import {useDoc} from '@docusaurus/theme-common/internal';
 import DocItemPaginator from '@theme/DocItem/Paginator';
 import DocVersionBanner from '@theme/DocVersionBanner';
 import DocVersionBadge from '@theme/DocVersionBadge';
@@ -11,8 +11,7 @@ import DocItemTOCDesktop from '@theme/DocItem/TOC/Desktop';
 import DocItemContent from '@theme/DocItem/Content';
 import DocBreadcrumbs from '@theme/DocBreadcrumbs';
 import Unlisted from '@theme/Unlisted';
-import type { Props } from '@theme/DocItem/Layout';
-import Comment from '@site/src/components/Comment';
+import type {Props} from '@theme/DocItem/Layout';
 
 import styles from './styles.module.css';
 
@@ -20,7 +19,7 @@ import styles from './styles.module.css';
  * Decide if the toc should be rendered, on mobile or desktop viewports
  */
 function useDocTOC() {
-  const { frontMatter, toc } = useDoc();
+  const {frontMatter, toc} = useDoc();
   const windowSize = useWindowSize();
 
   const hidden = frontMatter.hide_table_of_contents;
@@ -32,20 +31,18 @@ function useDocTOC() {
     canRender && (windowSize === 'desktop' || windowSize === 'ssr') ? (
       <DocItemTOCDesktop />
     ) : undefined;
-  const comments =
-    frontMatter.comments == undefined ? true : frontMatter.comments;
+
   return {
     hidden,
     mobile,
     desktop,
-    comments,
   };
 }
 
-export default function DocItemLayout({ children }: Props): JSX.Element {
+export default function DocItemLayout({children}: Props): JSX.Element {
   const docTOC = useDocTOC();
   const {
-    metadata: { unlisted },
+    metadata: {unlisted},
   } = useDoc();
   return (
     <div className="row">
@@ -61,7 +58,6 @@ export default function DocItemLayout({ children }: Props): JSX.Element {
             <DocItemFooter />
           </article>
           <DocItemPaginator />
-          {docTOC.comments && <Comment id={children.id} />}
         </div>
       </div>
       {docTOC.desktop && <div className="col col--3">{docTOC.desktop}</div>}

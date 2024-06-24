@@ -98,4 +98,17 @@
 
    If you are using GitHub pages for hosting, this command is a convenient way to build the website and push to the `gh-pages` branch.
 
+8. Override Pages
+
+   ```bash
+   yarn swizzle @docusaurus/theme-classic BlogPostItem --eject
+   ```
+
+   Override Pages:
+
+   - BlogPostPage
+   - BlogPostItem
+   - DocItem/Layout
+   - DocItem/Content
+
 </details>
