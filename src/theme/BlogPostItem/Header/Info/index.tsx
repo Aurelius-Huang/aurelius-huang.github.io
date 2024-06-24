@@ -1,18 +1,19 @@
 import React from 'react';
 import clsx from 'clsx';
-import {translate} from '@docusaurus/Translate';
-import {usePluralForm} from '@docusaurus/theme-common';
+import { translate } from '@docusaurus/Translate';
+import { usePluralForm } from '@docusaurus/theme-common';
 import {
   useBlogPost,
   useDateTimeFormat,
 } from '@docusaurus/theme-common/internal';
-import type {Props} from '@theme/BlogPostItem/Header/Info';
+import type { Props } from '@theme/BlogPostItem/Header/Info';
+import { BlogHeader } from '@site/src/components/ArticleHeader';
 
 import styles from './styles.module.css';
 
 // Very simple pluralization: probably good enough for now
 function useReadingTimePlural() {
-  const {selectMessage} = usePluralForm();
+  const { selectMessage } = usePluralForm();
   return (readingTimeFloat: number) => {
     const readingTime = Math.ceil(readingTimeFloat);
     return selectMessage(
@@ -24,13 +25,13 @@ function useReadingTimePlural() {
             'Pluralized label for "{readingTime} min read". Use as much plural forms (separated by "|") as your language support (see https://www.unicode.org/cldr/cldr-aux/charts/34/supplemental/language_plural_rules.html)',
           message: 'One min read|{readingTime} min read',
         },
-        {readingTime},
-      ),
+        { readingTime }
+      )
     );
   };
 }
 
-function ReadingTime({readingTime}: {readingTime: number}) {
+function ReadingTime({ readingTime }: { readingTime: number }) {
   const readingTimePlural = useReadingTimePlural();
   return <>{readingTimePlural(readingTime)}</>;
 }
@@ -52,8 +53,9 @@ function Spacer() {
 export default function BlogPostItemHeaderInfo({
   className,
 }: Props): JSX.Element {
-  const {metadata} = useBlogPost();
-  const {date, readingTime} = metadata;
+  const { metadata } = useBlogPost();
+  const { date, readingTime, permalink } = metadata;
+  const path = permalink ?? '';
 
   const dateTimeFormat = useDateTimeFormat({
     day: 'numeric',
@@ -68,6 +70,8 @@ export default function BlogPostItemHeaderInfo({
   return (
     <div className={clsx(styles.container, 'margin-vert--md', className)}>
       <DateTime date={date} formattedDate={formatDate(date)} />
+      <Spacer />
+      <BlogHeader path={path} />
       {typeof readingTime !== 'undefined' && (
         <>
           <Spacer />

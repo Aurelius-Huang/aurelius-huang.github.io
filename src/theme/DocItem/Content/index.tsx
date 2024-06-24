@@ -1,10 +1,11 @@
 import React from 'react';
 import clsx from 'clsx';
-import {ThemeClassNames} from '@docusaurus/theme-common';
-import {useDoc} from '@docusaurus/theme-common/internal';
+import { ThemeClassNames } from '@docusaurus/theme-common';
+import { useDoc } from '@docusaurus/theme-common/internal';
 import Heading from '@theme/Heading';
 import MDXContent from '@theme/MDXContent';
-import type {Props} from '@theme/DocItem/Content';
+import type { Props } from '@theme/DocItem/Content';
+import { DocHeader } from '@site/src/components/ArticleHeader';
 
 /**
  Title can be declared inside md content or declared through
@@ -17,7 +18,7 @@ import type {Props} from '@theme/DocItem/Content';
  - the markdown content does not already contain a top-level h1 heading
 */
 function useSyntheticTitle(): string | null {
-  const {metadata, frontMatter, contentTitle} = useDoc();
+  const { metadata, frontMatter, contentTitle } = useDoc();
   const shouldRender =
     !frontMatter.hide_title && typeof contentTitle === 'undefined';
   if (!shouldRender) {
@@ -26,13 +27,21 @@ function useSyntheticTitle(): string | null {
   return metadata.title;
 }
 
-export default function DocItemContent({children}: Props): JSX.Element {
+export default function DocItemContent({ children }: Props): JSX.Element {
   const syntheticTitle = useSyntheticTitle();
+  const { frontMatter } = useDoc();
+  const updated_at = frontMatter.last_update.date.toLocaleString('zh-CN', {
+    year: 'numeric',
+    month: 'long',
+    day: 'numeric',
+  });
+
   return (
     <div className={clsx(ThemeClassNames.docs.docMarkdown, 'markdown')}>
       {syntheticTitle && (
         <header>
           <Heading as="h1">{syntheticTitle}</Heading>
+          <DocHeader path={children.id} updatedAt={updated_at} />
         </header>
       )}
       <MDXContent>{children}</MDXContent>
