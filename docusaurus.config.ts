@@ -82,7 +82,7 @@ const config: Config = {
         path: './articles/ml',
         routeBasePath: 'ml',
         sidebarPath: './sidebars.ts',
-        showLastUpdateTime: true,
+        // showLastUpdateTime: true,
         remarkPlugins: [remarkMath],
         rehypePlugins: [rehypeKatex],
         // remarkPlugins: [(await import('remark-math')).default],
