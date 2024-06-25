@@ -59,7 +59,7 @@ const config: Config = {
           path: 'blog',
           blogTitle: '动态',
           routeBasePath: 'trend',
-          showReadingTime: true,
+          showReadingTime: false,
           postsPerPage: 5,
           blogSidebarCount: 'ALL',
           // Please change this to your repo.
