@@ -64,7 +64,7 @@ const config: Config = {
           blogSidebarCount: 'ALL',
           // Please change this to your repo.
           // Remove this to remove the "edit this page" links.
-          editUrl: 'https://github.com/aurelius-huang',
+          // editUrl: 'https://github.com/aurelius-huang',
         },
         theme: {
           customCss: './src/css/custom.css',
@@ -82,7 +82,7 @@ const config: Config = {
         path: './articles/ml',
         routeBasePath: 'ml',
         sidebarPath: './sidebars.ts',
-        showLastUpdateTime: true,
+        // showLastUpdateTime: true,
         remarkPlugins: [remarkMath],
         rehypePlugins: [rehypeKatex],
         // remarkPlugins: [(await import('remark-math')).default],
