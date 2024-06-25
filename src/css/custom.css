@@ -61,26 +61,24 @@
   display: none;
 }
 
-.article-hearder-update {
-  padding-right: 6px;
-}
-
-.article-hearder-reads {
-  display: inline-block;
-  min-width: 55px;
-}
-
-.article-image {
-  padding-top: 6px;
-}
-
-.article-image-alt {
-  font-weight: bold;
-}
-
 table {
   width: auto;
   display: table;
   margin-left: auto;
   margin-right: auto;
+}
+
+/* Markdown Image & Caption */
+
+p:has(> img) {
+  text-align: center;
+}
+
+img {
+  border-radius: 1%;
+}
+
+.caption {
+  font-weight: bold;
+  text-align: center;
 }

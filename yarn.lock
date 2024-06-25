@@ -2591,7 +2591,7 @@
   resolved "https://registry.npmmirror.com/@vue/shared/-/shared-3.4.30.tgz#72acfe8df65139dcf298e965fb2ab1cff419e400"
   integrity sha512-CLg+f8RQCHQnKvuHY9adMsMaQOcqclh6Z5V9TaoMgy0ut0tz848joZ7/CYFFyF/yZ5i2yaw7Fn498C+CNZVHIg==
 
-"@vueuse/core@^10.10.0":
+"@vueuse/core@^10.4.1":
   version "10.11.0"
   resolved "https://registry.npmmirror.com/@vueuse/core/-/core-10.11.0.tgz#b042585a8bf98bb29c177b33999bd0e3fcd9e65d"
   integrity sha512-x3sD4Mkm7PJ+pcq3HX8PLPBadXCAlSDR/waK87dz0gQE+qJnaaFhc/dZVfJz+IUYzTMVGum2QlR7ImiJQN4s6g==
@@ -2613,23 +2613,15 @@
   dependencies:
     vue-demi ">=0.14.8"
 
-"@waline/api@1.0.0-alpha.8":
-  version "1.0.0-alpha.8"
-  resolved "https://registry.npmmirror.com/@waline/api/-/api-1.0.0-alpha.8.tgz#c1cd6fc629a8d8397cc01609670cf9af7f8a5fc5"
-  integrity sha512-S6pgUUfv+gcXU3hiW3PNUwiUvPy7bXmmLB/bwdU3hN5YVT5Q7CxyVSLA3oJkrNO5lcisKK1GBPv0H2W1uB0eGA==
-
-"@waline/client@3.2.2":
-  version "3.2.2"
-  resolved "https://registry.npmmirror.com/@waline/client/-/client-3.2.2.tgz#5b9df9af9966786b1a8f87dda0d22439ca918534"
-  integrity sha512-9FBIq5dChJuo/L673KXxkmPsDvOcgsq8DZL2vFQQhFdN0SJjxK1CsRTaGOroIkdzQKlIocG6sZPyZXbY+SpPLw==
+"@waline/client@2.15.8":
+  version "2.15.8"
+  resolved "https://registry.npmmirror.com/@waline/client/-/client-2.15.8.tgz#b775357a8c199165be01f9036c9b0af1ecfef232"
+  integrity sha512-EBL7RXJUJs742miTvOU0Vt8NEmeJ63EN5TtSsYZfzjUdvEtlv+JsBbS5uiz3C9v5qV7Hz+XDZdc8nc13mG9vNQ==
   dependencies:
-    "@vueuse/core" "^10.10.0"
-    "@waline/api" "1.0.0-alpha.8"
+    "@vueuse/core" "^10.4.1"
     autosize "^6.0.1"
-    marked "^12.0.2"
-    marked-highlight "^2.1.1"
-    recaptcha-v3 "^1.10.0"
-    vue "^3.4.27"
+    marked "^4.3.0"
+    vue "^3.3.4"
 
 "@webassemblyjs/ast@1.12.1", "@webassemblyjs/ast@^1.12.1":
   version "1.12.1"
@@ -5669,15 +5661,10 @@ markdown-table@^3.0.0:
   resolved "https://registry.npmmirror.com/markdown-table/-/markdown-table-3.0.3.tgz#e6331d30e493127e031dd385488b5bd326e4a6bd"
   integrity sha512-Z1NL3Tb1M9wH4XESsCDEksWoKTdlUafKc4pt0GRwjUyXaCFZ+dc3g2erqB6zm3szA2IUSi7VnPI+o/9jnxh9hw==
 
-marked-highlight@^2.1.1:
-  version "2.1.3"
-  resolved "https://registry.npmmirror.com/marked-highlight/-/marked-highlight-2.1.3.tgz#a16db79d650b0bd8ae2898ac9a585646214562a0"
-  integrity sha512-t35JWm2u8HanOJ+gSJBAYQ0Jgr3vy+gl7ORAXN8bSEQFHl5FYXH0A7YXVMrfhmKaSuBSy6LidXECn3U9Qv/dHA==
-
-marked@^12.0.2:
-  version "12.0.2"
-  resolved "https://registry.npmmirror.com/marked/-/marked-12.0.2.tgz#b31578fe608b599944c69807b00f18edab84647e"
-  integrity sha512-qXUm7e/YKFoqFPYPa3Ukg9xlI5cyAtGmyEIzMfW//m6kXwCy2Ps9DYf5ioijFKQ8qyuscrHoY04iJGctu2Kg0Q==
+marked@^4.3.0:
+  version "4.3.0"
+  resolved "https://registry.npmmirror.com/marked/-/marked-4.3.0.tgz#796362821b019f734054582038b116481b456cf3"
+  integrity sha512-PRsaiG84bK+AMvxziE/lCFss8juXjNaWzVbN5tXAm4XjeaS9NAHhop+PjQxz2A9h8Q4M/xGmzP8vqNwy6JeK0A==
 
 mdast-util-directive@^3.0.0:
   version "3.0.0"
@@ -7485,11 +7472,6 @@ reading-time@^1.5.0:
   resolved "https://registry.npmmirror.com/reading-time/-/reading-time-1.5.0.tgz#d2a7f1b6057cb2e169beaf87113cc3411b5bc5bb"
   integrity sha512-onYyVhBNr4CmAxFsKS7bz+uTLRakypIe4R+5A824vBSkQy/hB3fZepoVEf8OVAxzLvK+H/jm9TzpI3ETSm64Kg==
 
-recaptcha-v3@^1.10.0:
-  version "1.10.0"
-  resolved "https://registry.npmmirror.com/recaptcha-v3/-/recaptcha-v3-1.10.0.tgz#f966b5a0d8021fd2ed85ac4be832f6acb6ec1ed1"
-  integrity sha512-aGTxYSk3FFNKnXeKDbLpgRDRyIHRZNBF5HyaXXAN1Aj4TSyyZvmoAn9CylvpqLV3pYpIQavwc+2rzhNFn5SsLQ==
-
 rechoir@^0.6.2:
   version "0.6.2"
   resolved "https://registry.npmmirror.com/rechoir/-/rechoir-0.6.2.tgz#85204b54dba82d5742e28c96756ef43af50e3384"
@@ -8645,7 +8627,7 @@ vue-demi@>=0.14.8:
   resolved "https://registry.npmmirror.com/vue-demi/-/vue-demi-0.14.8.tgz#00335e9317b45e4a68d3528aaf58e0cec3d5640a"
   integrity sha512-Uuqnk9YE9SsWeReYqK2alDI5YzciATE0r2SkA6iMAtuXvNTMNACJLJEXNXaEy94ECuBe4Sk6RzRU80kjdbIo1Q==
 
-vue@^3.4.27:
+vue@^3.3.4:
   version "3.4.30"
   resolved "https://registry.npmmirror.com/vue/-/vue-3.4.30.tgz#02c75c63a21e305c38a937866d8ee2269b62bbb4"
   integrity sha512-NcxtKCwkdf1zPsr7Y8+QlDBCGqxvjLXF2EX+yi76rV5rrz90Y6gK1cq0olIhdWGgrlhs9ElHuhi9t3+W5sG5Xw==
