@@ -34,10 +34,11 @@ function Spacer() {
   return <>{' · '}</>;
 }
 
-export const DocHeader: React.FC<{ path: string; updatedAt: string }> = ({
-  path,
-  updatedAt,
-}) => {
+export const DocHeader: React.FC<{
+  path: string;
+  updatedAt: string;
+  readingTime: string;
+}> = ({ path, updatedAt, readingTime }) => {
   return (
     <div id="article-info">
       <Admonition type="info">
@@ -47,18 +48,33 @@ export const DocHeader: React.FC<{ path: string; updatedAt: string }> = ({
           <EyeOutlined /> <PageviewCount path={path} />
           <Spacer />
           <CommentOutlined /> <CommentCount path={path} />
+          {readingTime && (
+            <>
+              <Spacer />
+              阅读需 {readingTime} 分钟
+            </>
+          )}
         </>
       </Admonition>
     </div>
   );
 };
 
-export const BlogHeader: React.FC<{ path: string }> = ({ path }) => {
+export const BlogHeader: React.FC<{ path: string; readingTime: string }> = ({
+  path,
+  readingTime,
+}) => {
   return (
     <>
       <EyeOutlined /> <PageviewCount path={path} />
       <Spacer />
       <CommentOutlined /> <CommentCount path={path} />
+      {readingTime && (
+        <>
+          <Spacer />
+          阅读需 {readingTime} 分钟
+        </>
+      )}
     </>
   );
 };

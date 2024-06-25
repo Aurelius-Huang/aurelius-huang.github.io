@@ -53,9 +53,10 @@ function Spacer() {
 export default function BlogPostItemHeaderInfo({
   className,
 }: Props): JSX.Element {
-  const { metadata } = useBlogPost();
+  const { metadata, frontMatter } = useBlogPost();
   const { date, readingTime, permalink } = metadata;
   const path = permalink ?? '';
+  const readTime = frontMatter.reading_time;
 
   const dateTimeFormat = useDateTimeFormat({
     day: 'numeric',
@@ -71,7 +72,7 @@ export default function BlogPostItemHeaderInfo({
     <div className={clsx(styles.container, 'margin-vert--md', className)}>
       <DateTime date={date} formattedDate={formatDate(date)} />
       <Spacer />
-      <BlogHeader path={path} />
+      <BlogHeader path={path} readingTime={readTime} />
       {typeof readingTime !== 'undefined' && (
         <>
           <Spacer />

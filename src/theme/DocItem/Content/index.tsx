@@ -35,13 +35,18 @@ export default function DocItemContent({ children }: Props): JSX.Element {
     month: 'long',
     day: 'numeric',
   });
+  const readingTime = frontMatter.reading_time;
 
   return (
     <div className={clsx(ThemeClassNames.docs.docMarkdown, 'markdown')}>
       {syntheticTitle && (
         <header>
           <Heading as="h1">{syntheticTitle}</Heading>
-          <DocHeader path={children.id} updatedAt={updated_at} />
+          <DocHeader
+            path={children.id}
+            updatedAt={updated_at}
+            readingTime={readingTime}
+          />
         </header>
       )}
       <MDXContent>{children}</MDXContent>
