@@ -1,3 +1,15 @@
+---
+id: cross-domain
+sidebar_position: 4
+title: 跨域：前后端分离 Web 服务架构
+description: 跨域：前后端分离 Web 服务架构
+last_update:
+  author: Aurelius
+  date: 2024-08-09
+tags:
+  - 跨域
+---
+
 > Prompt: 介绍并分析一下前后端分离 Web 服务架构中存在的 “跨域” 问题，以及相关的最佳实践。
 >
 > Prompt: 简要介绍”同源策略“的含义；当前后端之间存在一个网管层（比如 Kong），跨域问题会演变成怎样？又有哪些应对的最佳实践？

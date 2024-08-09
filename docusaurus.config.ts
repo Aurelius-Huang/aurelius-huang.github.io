@@ -76,10 +76,11 @@ const config: Config = {
   plugins: [
     // ["docusaurus-plugin-umami"],
     [
+      // 数智通识
       '@docusaurus/plugin-content-docs',
       {
         id: 'ml',
-        path: './articles/ml',
+        path: './articles/general/ml',
         routeBasePath: 'ml',
         sidebarPath: './sidebars.ts',
         // showLastUpdateTime: true,
@@ -93,7 +94,7 @@ const config: Config = {
       '@docusaurus/plugin-content-docs',
       {
         id: 'dl',
-        path: './articles/dl',
+        path: './articles/general/dl',
         routeBasePath: 'dl',
         sidebarPath: './sidebars.ts',
       },
@@ -102,7 +103,7 @@ const config: Config = {
       '@docusaurus/plugin-content-docs',
       {
         id: 'aigc',
-        path: './articles/aigc',
+        path: './articles/general/aigc',
         routeBasePath: 'aigc',
         sidebarPath: './sidebars.ts',
       },
@@ -110,18 +111,44 @@ const config: Config = {
     [
       '@docusaurus/plugin-content-docs',
       {
-        id: 'practice',
-        path: './articles/practice',
-        routeBasePath: 'practice',
+        id: 'essence-of-computing',
+        path: './articles/general/the-essence-of-computing',
+        routeBasePath: 'essence-of-computing',
+        remarkPlugins: [remarkMath],
+        rehypePlugins: [rehypeKatex],
         sidebarPath: './sidebars.ts',
       },
     ],
+
+    // 算法通解
     [
       '@docusaurus/plugin-content-docs',
       {
-        id: 'communication',
-        path: './articles/communication',
-        routeBasePath: 'communication',
+        id: 'algorithm',
+        path: './articles/algorithm',
+        routeBasePath: 'algorithm',
+        sidebarPath: './sidebars.ts',
+      },
+    ],
+
+    // 计算通践
+    [
+      '@docusaurus/plugin-content-docs',
+      {
+        id: 'working',
+        path: './articles/practice/working',
+        routeBasePath: 'working',
+        sidebarPath: './sidebars.ts',
+      },
+    ],
+
+    // 知见通感
+    [
+      '@docusaurus/plugin-content-docs',
+      {
+        id: 'thought',
+        path: './articles/perception/thought',
+        routeBasePath: 'thought',
         sidebarPath: './sidebars.ts',
       },
     ],
@@ -149,34 +176,72 @@ const config: Config = {
           position: 'left',
         },
         {
-          to: '/ml',
-          label: '机器学习',
-          docId: 'index',
-          type: 'doc',
-          position: 'right',
-          docsPluginId: 'ml',
-        },
-        {
-          to: '/dl',
-          label: '深度学习',
-          docId: 'index',
-          type: 'doc',
-          position: 'right',
-          docsPluginId: 'dl',
-        },
-        {
-          to: '/aigc',
-          label: 'AIGC',
-          docId: 'index',
-          type: 'doc',
-          position: 'right',
-          docsPluginId: 'aigc',
-        },
-        {
           type: 'dropdown',
-          label: '应用篇',
+          label: '数智通识',
           position: 'right',
           items: [
+            {
+              to: '/ml',
+              label: '机器学习',
+              docId: 'index',
+              type: 'doc',
+              docsPluginId: 'ml',
+            },
+            {
+              to: '/dl',
+              label: '深度学习',
+              docId: 'index',
+              type: 'doc',
+              docsPluginId: 'dl',
+            },
+            {
+              to: '/aigc',
+              label: 'AIGC',
+              docId: 'index',
+              type: 'doc',
+              docsPluginId: 'aigc',
+            },
+            {
+              to: '/essence-of-computing',
+              label: '计算之魂',
+              docId: 'index',
+              type: 'doc',
+              docsPluginId: 'essence-of-computing',
+            },
+          ],
+        },
+        {
+          to: '/algorithm',
+          label: '算法通解',
+          docId: 'index',
+          type: 'doc',
+          position: 'right',
+          docsPluginId: 'algorithm',
+        },
+        // {
+        //   type: 'dropdown',
+        //   label: '算法通解',
+        //   position: 'right',
+        //   items: [
+        //     {
+        //       to: '/practice',
+        //       label: '工程实践',
+        //       docId: 'index',
+        //       docsPluginId: 'practice',
+        //     },
+        //   ],
+        // },
+        {
+          type: 'dropdown',
+          label: '计算通践',
+          position: 'right',
+          items: [
+            {
+              to: '/working',
+              label: '工具箱',
+              docId: 'index',
+              docsPluginId: 'working',
+            },
             {
               to: '/practice',
               label: '工程实践',
@@ -187,14 +252,14 @@ const config: Config = {
         },
         {
           type: 'dropdown',
-          label: '见闻增长',
+          label: '知见通感',
           position: 'right',
           items: [
             {
-              to: '/communication',
-              label: '人际沟通',
+              to: '/thought',
+              label: '见闻增长',
               docId: 'index',
-              docsPluginId: 'communication',
+              docsPluginId: 'thought',
             },
           ],
         },
@@ -234,15 +299,15 @@ const config: Config = {
           items: [
             {
               label: 'NLP',
-              to: '/practice',
+              to: '/working',
             },
             {
               label: '搜索引擎',
-              to: '/practice',
+              to: '/working',
             },
             {
               label: '推荐系统',
-              to: '/practice',
+              to: '/working',
             },
           ],
         },
@@ -251,15 +316,15 @@ const config: Config = {
           items: [
             {
               label: 'Java',
-              to: '/practice',
+              to: '/working',
             },
             {
               label: 'Python',
-              to: '/practice',
+              to: '/working',
             },
             {
               label: 'Go',
-              to: '/practice',
+              to: '/working',
             },
           ],
         },

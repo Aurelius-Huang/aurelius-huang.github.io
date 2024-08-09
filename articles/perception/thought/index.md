@@ -1,11 +1,11 @@
 ---
 id: index
 sidebar_position: 1
-title: 人际沟通
-description: 见闻增长 Home
+title: 见闻增长
+description: 见闻增长
 last_update:
   author: Aurelius
-  date: 2024-06-24
+  date: 2024-08-09
 tags:
   - Home
   - 见闻增长

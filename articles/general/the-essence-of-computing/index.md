@@ -1,14 +1,14 @@
 ---
 id: index
 sidebar_position: 1
-title: 工程实践
-description: 工程实践 Home
+title: 计算之魂
+description: 计算之魂
 last_update:
   author: Aurelius
-  date: 2024-06-24
+  date: 2024-08-09
 tags:
   - Home
-  - AI 工程实践
+  - 计算之魂
 ---
 
 .keep
